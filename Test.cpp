@@ -60,6 +60,14 @@ TEST_CASE("Test replacement of p and f") {
 
 TEST_CASE("Test replacement of b and f") {
     CHECK(find("be happy", "fe") == string("be"));
+    
+    CHECK(find("be hapfy", "haffy") == string("hapfy"));
+    CHECK(find("be haffy", "haffy") == string("haffy"));
+    CHECK(find("be hapfy", "happy") == string("hapfy"));
+    CHECK(find("be happy", "hapfy") == string("happy"));
+
+
+
 
 }
 
@@ -145,10 +153,25 @@ TEST_CASE("Test replacement of c and k and q") {
 TEST_CASE("Test replacement of g and j") {
     CHECK(find("junge and jurry", "judje") == string("judge"));
     CHECK(find("judge and jurry", "gudge") == string("judge"));
+    CHECK(find("gudge and jurry", "gudge") == string("gudge"));
+    CHECK(find("gudge and jurry", "gudje") == string("gudge"));
+    CHECK(find("gudge and jurry", "judje") == string("gudge"));
+    CHECK(find("gudge and jurry", "GUdje") == string("gudge"));
+
+
+
+
 
     CHECK(find("judge and jurry", "gudje") == string("judge"));
+     CHECK(find("gudje and jurry", "gudje") == string("gudje"));
+
     CHECK(find("awesome gadget", "gadjet") == string("gadget"));
+    CHECK(find("awesome gadjet", "gadjet") == string("gadjet"));
+
     CHECK(find("junk food", "gunk") == string("junk"));
+    CHECK(find("gunk food", "junk") == string("gunk"));
+
+    
 
 }   
 
