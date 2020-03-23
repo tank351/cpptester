@@ -1,3 +1,6 @@
+/*
+ * Authors : hosam hegly & aiman younis
+*/
 #include "PhoneticFinder.hpp"
 
 #include <iostream>

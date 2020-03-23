@@ -5,6 +5,7 @@
  * IMPORTANT: Please write more tests - the tests here are only for example and are not complete.
  * 
  * Date: 2020-02
+ * Authors : hosam hegly & aiman younis
  */
 
 #include "doctest.h"
